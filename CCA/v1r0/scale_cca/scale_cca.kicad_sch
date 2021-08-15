@@ -4,7 +4,7 @@
 
   (title_block
     (title "Scale CCA")
-    (date "2021-08-14")
+    (date "2021-08-15")
     (rev "v1r0")
   )
 
@@ -311,6 +311,7 @@
     )
   )
 
+
   (junction (at 64.77 43.18) (diameter 1.016) (color 0 0 0 0))
   (junction (at 72.39 43.18) (diameter 1.016) (color 0 0 0 0))
   (junction (at 81.28 43.18) (diameter 1.016) (color 0 0 0 0))
@@ -409,9 +410,13 @@
     (uuid cf8a77c9-f308-4663-931b-d22313934062)
   )
 
-  (text "3.5-5.5V" (at 86.36 35.56 180)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
+  (text "VCC: 3.5-5.5V" (at 17.78 21.59 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 59acde7e-5f5e-4768-87d8-17a466c429c4)
+  )
+  (text "0.1W / SK6805\n1.1W (5v/0.22a) / CCA" (at 17.78 30.48 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c7d2595a-b9e4-4304-8a85-f7175da5e673)
   )
 
   (label "DIN" (at 64.77 69.85 180)
