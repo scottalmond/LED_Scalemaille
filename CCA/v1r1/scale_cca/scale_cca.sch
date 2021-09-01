@@ -1,0 +1,31 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SC0320:SC0320 U1
+U 1 1 605507D3
+P 8900 3750
+F 0 "U1" H 8900 6117 50  0000 C CNN
+F 1 "SC0320" H 8900 6026 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8900 3750 50  0001 L BNN
+F 3 "" H 8900 3750 50  0001 L BNN
+F 4 "" H 8900 3750 50  0001 L BNN "MAXIMUM_PACKAGE_HIEGHT"
+F 5 "Manufacturer Recommendations" H 8900 3750 50  0001 L BNN "STANDARD"
+F 6 "2020-12-17" H 8900 3750 50  0001 L BNN "PARTREV"
+F 7 "Raspberry Pi" H 8900 3750 50  0001 L BNN "MANUFACTURER"
+	1    8900 3750
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
