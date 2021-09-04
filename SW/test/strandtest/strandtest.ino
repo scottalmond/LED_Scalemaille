@@ -20,7 +20,7 @@
 #define LED_PIN    A0
 
 // How many NeoPixels are attached to the Arduino?
-#define LED_COUNT 11
+#define LED_COUNT 11*45
 
 // Declare our NeoPixel strip object:
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
@@ -46,7 +46,13 @@ void setup() {
 
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();            // Turn OFF all pixels ASAP
-  strip.setBrightness(50); // Set BRIGHTNESS to about 1/5 (max = 255)
+  strip.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
+  //100 4.81
+  //208 10
+  //255 brightness, 144 LEDs, 11.2 Watts
+  //est 74 brightness for 11.2 watss on 45*11 LEDs for *12 variant
+  //est 178 brighntess for 11.2 watts on 45*11 LEDs for *5 variant
+  //222 if 3:1 power ratio
   pinMode(A3,OUTPUT);
 }
 

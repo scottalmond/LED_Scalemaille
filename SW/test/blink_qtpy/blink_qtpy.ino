@@ -1,8 +1,9 @@
 #include <Adafruit_NeoPixel.h>
 
 // create a pixel strand with 1 pixel on PIN_NEOPIXEL
-Adafruit_NeoPixel strip(11*45, A0);
+Adafruit_NeoPixel strip(13*5*3*3, A0);
 Adafruit_NeoPixel pixels2(1, PIN_NEOPIXEL);
+int frameCount=0;
 
 void setup() {
     strip.begin();  // initialize the pixel
@@ -16,6 +17,7 @@ void loop() {
     //strip.setPixelColor(0, pixels.Color(0, 255, 0));
     // and write the data
     //strip.show();
+    frameCount++;
     rainbow(firstPixelHue);
     pixels2.show();
 
@@ -47,7 +49,8 @@ void rainbow(long firstPixelHue) {
     // Here we're using just the single-argument hue variant. The result
     // is passed through strip.gamma32() to provide 'truer' colors
     // before assigning to each pixel:
-    strip.setPixelColor(i, strip.gamma32(strip.ColorHSV(pixelHue)));
+    //strip.setPixelColor(i, strip.gamma32(strip.ColorHSV(pixelHue)));
+    strip.setPixelColor(i, frameCount%11==i%11?strip.gamma32(strip.ColorHSV(pixelHue)):0);
   }
   strip.show(); // Update strip with new contents
 }
