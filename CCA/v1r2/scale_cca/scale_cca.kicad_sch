@@ -400,8 +400,10 @@
     )
   )
 
+
   (junction (at 223.52 27.94) (diameter 1.016) (color 0 0 0 0))
   (junction (at 231.14 27.94) (diameter 1.016) (color 0 0 0 0))
+  (junction (at 240.03 27.94) (diameter 1.016) (color 0 0 0 0))
   (junction (at 267.97 20.32) (diameter 1.016) (color 0 0 0 0))
 
   (wire (pts (xy 57.15 69.85) (xy 44.45 69.85))
@@ -1241,6 +1243,22 @@
     (pin "1" (uuid 8e379ba3-fe86-4771-9d2b-28193df81d45))
   )
 
+  (symbol (lib_id "power:GND") (at 240.03 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 741cd794-28c5-475f-ac10-0466a664d375)
+    (property "Reference" "#PWR0101" (id 0) (at 240.03 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 240.03 37.3444 0))
+    (property "Footprint" "" (id 2) (at 240.03 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 240.03 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8e379ba3-fe86-4771-9d2b-28193df81d45))
+  )
+
   (symbol (lib_id "power:GND") (at 275.59 22.86 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 59c12bad-0cba-43bc-b4cf-29a5368a00c9)
@@ -1321,6 +1339,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 223.52 30.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1642da3f-dfe3-4d4e-b287-d57066e554ae))
+    (pin "2" (uuid 8ca51962-25a0-489b-ad3e-a5ca3c961116))
+  )
+
+  (symbol (lib_id "Device:C_Small") (at 240.03 30.48 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid a70699b6-5fd1-47ee-8d79-8b69b6b1dcfd)
+    (property "Reference" "C2" (id 0) (at 237.7058 29.7191 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100 nF" (id 1) (at 237.7058 32.0178 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (id 2) (at 240.03 30.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 240.03 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1642da3f-dfe3-4d4e-b287-d57066e554ae))
@@ -1786,8 +1823,14 @@
     (path "/0c26f2d7-9979-4556-b44e-9bb74e4a93a6"
       (reference "#PWR033") (unit 1) (value "GND") (footprint "")
     )
+    (path "/741cd794-28c5-475f-ac10-0466a664d375"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+    )
     (path "/2a2169c2-dea9-4e60-bd38-0b78970e6364"
       (reference "C1") (unit 1) (value "10 uF") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/a70699b6-5fd1-47ee-8d79-8b69b6b1dcfd"
+      (reference "C2") (unit 1) (value "100 nF") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/4bab9a77-dc64-4823-ae84-762ebfd7af8a"
       (reference "D1") (unit 1) (value "SK6805") (footprint "SK6805_2020:LED_SK6805_2.0x2.0mm")
